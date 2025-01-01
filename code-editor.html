@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheets/codeditor.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Website logo -->
+            <div class="logo">
+                <img src="../images/SikhoLogo.png" alt="">
+                <!-- Website logo name -->
+                <span>Sikho</span>
+            </div>
+            <!-- Navbar menu when website view in Desktop  -->
+            <ul class="desktop-nav-menu">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-book-open"></i><span>Learn</span></a>
+                    <ul class="desktop-learn-dropdown-content">
+                        <li><a href="../courses/LearnHtml.html">HTML</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-lightbulb"></i><span>Take Quiz</span></a>
+                    <ul class="desktop-quiz-dropdown-content">
+                        <li><a href="../quizes/HtmlQuiz.html">HTML Quiz</a></li>
+                        <li><a href="../quizes/CssQuiz.html">CSS Quiz</a></li>
+                    </ul>
+                </li>
+                <li><a href="./code-editor.html"><i class="fa-solid fa-code"></i><span>Code Editor</span></a></li>
+                <!-- Menu link hover effect -->
+                <span class="nav-menu-hover-effect"></span>
+            </ul>
+            <div>
+                <button class="login"><a href="../login.html">Log in</a></button>
+            </div>
+            <!-- Humburger icon when Somebody view in Phones-->
+            <label class="hamburger-menu" for="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Hamburger menu icon with hidden checkbox -->
+            <input type="checkbox" id="menuToggle">
+            <!-- Navbar menu when website view in Mobile Phones  -->
+            <ul class="phone-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="learn-dropdown">
+                    <input type="checkbox" id="learn-dropdown-checkbox" name="Click">
+                    <label for="learn-dropdown-checkbox" class="learn-dropdown-label">Learn</label>
+                    <div class="learn-dropdown-content">
+                        <a href="./LearnHtml.html" >HTML</a>
+                    </div>
+                </li>
+                <li class="quiz-dropdown">
+                    <input type="checkbox" id="quiz-dropdown-checkbox" name="Click">
+                    <label for="quiz-dropdown-checkbox" class="quiz-dropdown-label">Take Quiz</label>
+                    <div class="quiz-dropdown-content">
+                        <a href="../quizes/HtmlQuiz.html" >HTML Quiz</a>
+                        <a href="../quizes/CssQuiz.html" >CSS Quiz</a>
+                    </div>
+                </li>
+                <li><a href="./code-editor.html">Code Editor</a></li>
+                <li><a href="../login.html">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <iframe src="https://onecompiler.com/html" frameborder="0"></iframe>
+    </main>
+</body>
+
+</html>

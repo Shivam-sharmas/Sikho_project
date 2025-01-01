@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheets/quiz.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Website logo -->
+            <div class="logo">
+                <img src="../images/SikhoLogo.png" alt="">
+                <!-- Website logo name -->
+                <span>Sikho</span>
+            </div>
+            <!-- Navbar menu when website view in Desktop  -->
+            <ul class="desktop-nav-menu">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-book-open"></i><span>Learn</span></a>
+                    <ul class="desktop-learn-dropdown-content">
+                        <li><a href="../courses/LearnHtml.html">HTML</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-lightbulb"></i><span>Take Quiz</span></a>
+                    <ul class="desktop-quiz-dropdown-content">
+                        <li><a href="./HtmlQuiz.html">HTML Quiz</a></li>
+                        <li><a href="./CssQuiz.html">CSS Quiz</a></li>
+                    </ul>
+                </li>
+                <li><a href="../courses/code-editor.html"><i class="fa-solid fa-code"></i><span>Code Editor</span></a></li>
+                <!-- Menu link hover effect -->
+                <span class="nav-menu-hover-effect"></span>
+            </ul>
+            <div>
+                <button class="login"><a href="../login.html">Log in</a></button>
+            </div>
+            <!-- Humburger icon when Somebody view in Phones-->
+            <label class="hamburger-menu" for="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Hamburger menu icon with hidden checkbox -->
+            <input type="checkbox" id="menuToggle">
+            <!-- Navbar menu when website view in Mobile Phones  -->
+            <ul class="phone-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="learn-dropdown">
+                    <input type="checkbox" id="learn-dropdown-checkbox" name="Click">
+                    <label for="learn-dropdown-checkbox" class="learn-dropdown-label">Learn</label>
+                    <div class="learn-dropdown-content">
+                        <a href="../courses/LearnHtml.html">HTML</a>
+                    </div>
+                </li>
+                <li class="quiz-dropdown">
+                    <input type="checkbox" id="quiz-dropdown-checkbox" name="Click">
+                    <label for="quiz-dropdown-checkbox" class="quiz-dropdown-label">Take Quiz</label>
+                    <div class="quiz-dropdown-content">
+                        <a href="./HtmlQuiz.html">HTML Quiz</a>
+                        <a href="./CssQuiz.html">CSS Quiz</a>
+                    </div>
+                </li>
+                <li><a href="../courses/code-editor.html">Code Editor</a></li>
+                <li><a href="../login.html">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="quiz-cards-containter">
+            <div id="question1" class="quiz-card">
+                <p>Question 1: What does CSS stand for?</p>
+                <ol>
+                    <li><input type="radio" id="q1option1" name="question1"> <label for="q1option1">Cascading Style Sheets</label></li>
+                    <li><input type="radio" id="q1option2" name="question1"> <label for="q1option2">Colorful Style Sheets</label></li>
+                    <li><input type="radio" id="q1option3" name="question1"> <label for="q1option3">Creative Style Sheets</label></li>
+                    <li><input type="radio" id="q1option4" name="question1"> <label for="q1option4">Computer Style Sheets</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn next"><a href="#question2">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question2" class="quiz-card">
+                <p>Question 2: Which property is used to change the background color?</p>
+                <ol>
+                    <li><input type="radio" id="q2option1" name="question2"> <label for="q2option1">bgcolor</label></li>
+                    <li><input type="radio" id="q2option2" name="question2"> <label for="q2option2">color</label></li>
+                    <li><input type="radio" id="q2option3" name="question2"> <label for="q2option3">background-color</label></li>
+                    <li><input type="radio" id="q2option4" name="question2"> <label for="q2option4">background</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question1"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question3">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question3" class="quiz-card">
+                <p>Question 3: Which CSS property is used to change the text color?</p>
+                <ol>
+                    <li><input type="radio" id="q3option1" name="question3"> <label for="q3option1">font-color</label></li>
+                    <li><input type="radio" id="q3option2" name="question3"> <label for="q3option2">text-color</label></li>
+                    <li><input type="radio" id="q3option3" name="question3"> <label for="q3option3">color</label></li>
+                    <li><input type="radio" id="q3option4" name="question3"> <label for="q3option4">text-style</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question2"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question4">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question4" class="quiz-card">
+                <p>Question 4: How do you make text bold in CSS?</p>
+                <ol>
+                    <li><input type="radio" id="q4option1" name="question4"> <label for="q4option1">font-style: bold;</label></li>
+                    <li><input type="radio" id="q4option2" name="question4"> <label for="q4option2">font-weight: bold;</label></li>
+                    <li><input type="radio" id="q4option3" name="question4"> <label for="q4option3">text-weight: bold;</label></li>
+                    <li><input type="radio" id="q4option4" name="question4"> <label for="q4option4">style: bold;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question3"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question5">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question5" class="quiz-card">
+                <p>Question 5: Which CSS property is used to set the spacing between lines of text?</p>
+                <ol>
+                    <li><input type="radio" id="q5option1" name="question5"> <label for="q5option1">etter-spacing</label></li>
+                    <li><input type="radio" id="q5option2" name="question5"> <label for="q5option2">line-height</label></li>
+                    <li><input type="radio" id="q5option3" name="question5"> <label for="q5option3">spacing</label></li>
+                    <li><input type="radio" id="q5option4" name="question5"> <label for="q5option4">line-spacing</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question4"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question6">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question6" class="quiz-card">
+                <p>Question 6: What is the correct syntax for adding a comment in CSS?</p>
+                <ol>
+                    <li><input type="radio" id="q6option1" name="question6"> <label for="q6option1">// comment //</label></li>
+                    <li><input type="radio" id="q6option2" name="question6"> <label for="q6option2">/* comment */</label></li>
+                    <li><input type="radio" id="q6option3" name="question6"> <label for="q6option3"> &lt;!-- comment --&gt;</label></li>
+                    <li><input type="radio" id="q6option4" name="question6"> <label for="q6option4">## comment ##</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question5"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question7">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question7" class="quiz-card">
+                <p>Question 7: How do you add a shadow to an element in CSS?</p>
+                <ol>
+                    <li><input type="radio" id="q7option1" name="question7"> <label for="q7option1">box-shadow</label></li>
+                    <li><input type="radio" id="q7option2" name="question7"> <label for="q7option2">shadow</label></li>
+                    <li><input type="radio" id="q7option3" name="question7"> <label for="q7option3">text-shadow</label></li>
+                    <li><input type="radio" id="q7option4" name="question7"> <label for="q7option4">element-shadow</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question6"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question8">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question8" class="quiz-card">
+                <p>Question 8: Which CSS property is used to make the text italic?</p>
+                <ol>
+                    <li><input type="radio" id="q8option1" name="question8"> <label for="q8option1">font-weight</label></li>
+                    <li><input type="radio" id="q8option2" name="question8"> <label for="q8option2">font-style</label></li>
+                    <li><input type="radio" id="q8option3" name="question8"> <label for="q8option3">text-style</label></li>
+                    <li><input type="radio" id="q8option4" name="question8"> <label for="q8option4">font-variant</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question7"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question9">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question9" class="quiz-card">
+                <p>Question 9: How do you apply CSS styles to an element with id="header"?</p>
+                <ol>
+                    <li><input type="radio" id="q9option1" name="question9"> <label for="q9option1">#header { }</label></li>
+                    <li><input type="radio" id="q9option2" name="question9"> <label for="q9option2">.header { }</label></li>
+                    <li><input type="radio" id="q9option3" name="question9"> <label for="q9option3">header { }</label></li>
+                    <li><input type="radio" id="q9option4" name="question9"> <label for="q9option4">*header { }</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question8"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question10">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question10" class="quiz-card">
+                <p>Question 10: Which CSS property is used to set the space between the content and the border?</p>
+                <ol>
+                    <li><input type="radio" id="q10option1" name="question10"> <label for="q10option1">margin</label></li>
+                    <li><input type="radio" id="q10option2" name="question10"> <label for="q10option2">padding</label></li>
+                    <li><input type="radio" id="q10option3" name="question10"> <label for="q10option3">spacing</label></li>
+                    <li><input type="radio" id="q10option4" name="question10"> <label for="q10option4">border-spacing</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question9"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question11">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question11" class="quiz-card">
+                <p>Question 11: Which CSS property controls the order of stacked elements?</p>
+                <ol>
+                    <li><input type="radio" id="q11option1" name="question11"> <label for="q11option1">z-order</label></li>
+                    <li><input type="radio" id="q11option2" name="question11"> <label for="q11option2">order</label></li>
+                    <li><input type="radio" id="q11option3" name="question11"> <label for="q11option3">z-index</label></li>
+                    <li><input type="radio" id="q11option4" name="question11"> <label for="q11option4">stack-index</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question10"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question12">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question12" class="quiz-card">
+                <p>Question 12: What is the default value of the `position` property in CSS?</p>
+                <ol>
+                    <li><input type="radio" id="q12option1" name="question12"> <label for="q12option1">static</label></li>
+                    <li><input type="radio" id="q12option2" name="question12"> <label for="q1option2">relative</label></li>
+                    <li><input type="radio" id="q12option3" name="question12"> <label for="q1option3">absolute</label></li>
+                    <li><input type="radio" id="q12option4" name="question12"> <label for="q12option4">fixed</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question11"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question13">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question13" class="quiz-card">
+                <p>Question 13: Which CSS property is used to control the flow of elements within a container?</p>
+                <ol>
+                    <li><input type="radio" id="q13option1" name="question13"> <label for="q13option1">float</label></li>
+                    <li><input type="radio" id="q13option2" name="question13"> <label for="q13option2">overflow</label></li>
+                    <li><input type="radio" id="q13option3" name="question13"> <label for="q13option3">clear</label></li>
+                    <li><input type="radio" id="q13option4" name="question13"> <label for="q13option4">display</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question12"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question14">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question14" class="quiz-card">
+                <p>Question 14: Which CSS property is used to specify the transparency of an element?</p>
+                <ol>
+                    <li><input type="radio" id="q14option1" name="question14"> <label for="q14option1">visibility</label></li>
+                    <li><input type="radio" id="q14option2" name="question14"> <label for="q14option2">opacity</label></li>
+                    <li><input type="radio" id="q14option3" name="question14"> <label for="q14option3">display</label></li>
+                    <li><input type="radio" id="q14option4" name="question14"> <label for="q14option4">filter</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question13"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question15">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question15" class="quiz-card">
+                <p>Question 15: Which CSS property is used to change the font of an element?</p>
+                <ol>
+                    <li><input type="radio" id="q15option1" name="question15"> <label for="q15option1">font-family</label></li>
+                    <li><input type="radio" id="q15option2" name="question15"> <label for="q15option2">font-style</label></li>
+                    <li><input type="radio" id="q15option3" name="question15"> <label for="q15option3">font-weight</label></li>
+                    <li><input type="radio" id="q15option4" name="question15"> <label for="q15option4">font-size</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question14"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question16">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question16" class="quiz-card">
+                <p>Question 16: Which property is used to add rounded corners to an element?</p>
+                <ol>
+                    <li><input type="radio" id="q16option1" name="question16"> <label for="q16option1">corner-radius</label></li>
+                    <li><input type="radio" id="q16option2" name="question16"> <label for="q16option2">border-style</label></li>
+                    <li><input type="radio" id="q16option3" name="question16"> <label for="q16option3">border-radius</label></li>
+                    <li><input type="radio" id="q16option4" name="question16"> <label for="q16option4">curve-radius</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question15"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question17">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question17" class="quiz-card">
+                <p>Question 17: How can you make a list display horizontally in CSS?</p>
+                <ol>
+                    <li><input type="radio" id="q17option1" name="question17"> <label for="q17option1">list-style: horizontal;</label></li>
+                    <li><input type="radio" id="q17option2" name="question17"> <label for="q17option2">display: inline;</label></li>
+                    <li><input type="radio" id="q17option3" name="question17"> <label for="q17option3">float: left;</label></li>
+                    <li><input type="radio" id="q17option4" name="question17"> <label for="q17option4">text-align: center;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question16"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question18">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question18" class="quiz-card">
+                <p>Question 18: How do you apply a transition effect to an element in CSS?</p>
+                <ol>
+                    <li><input type="radio" id="q18option1" name="question1"> <label for="q18option1">ransition: all 0.5s;</label></li>
+                    <li><input type="radio" id="q18option2" name="question1"> <label for="q18option2">effect: transition 0.5s;</label></li>
+                    <li><input type="radio" id="q18option3" name="question1"> <label for="q18option3">animation: 0.5s;</label></li>
+                    <li><input type="radio" id="q18option4" name="question1"> <label for="q18option4">move: ease 0.5s;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question17"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question19">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question19" class="quiz-card">
+                <p>Question 20: What does the `overflow` property in CSS control?</p>
+                <ol>
+                    <li><input type="radio" id="q19option1" name="question19"> <label for="q19option1">How elements are floated</label></li>
+                    <li><input type="radio" id="q19option2" name="question19"> <label for="q19option2">How content is clipped or scrolled</label></li>
+                    <li><input type="radio" id="q19option3" name="question19"> <label for="q19option3">How margins are applied</label></li>
+                    <li><input type="radio" id="q19option4" name="question19"> <label for="q19option4">How elements are aligned</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question18"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question20">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question20" class="quiz-card">
+                <p>Question 20: Which CSS property is used to control the visibility of an element?</p>
+                <ol>
+                    <li><input type="radio" id="q20option1" name="question20"> <label for="q20option1">display</label></li>
+                    <li><input type="radio" id="q20option2" name="question20"> <label for="q20option2">visibility</label></li>
+                    <li><input type="radio" id="q20option3" name="question20"> <label for="q20option3">opacity</label></li>
+                    <li><input type="radio" id="q20option4" name="question20"> <label for="q20option4">hidden</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question19"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="">Submit</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

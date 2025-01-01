@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheets/quiz.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Website logo -->
+            <div class="logo">
+                <img src="../images/SikhoLogo.png" alt="">
+                <!-- Website logo name -->
+                <span>Sikho</span>
+            </div>
+            <!-- Navbar menu when website view in Desktop  -->
+            <ul class="desktop-nav-menu">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-book-open"></i><span>Learn</span></a>
+                    <ul class="desktop-learn-dropdown-content">
+                        <li><a href="../courses/LearnHtml.html">HTML</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-lightbulb"></i><span>Take Quiz</span></a>
+                    <ul class="desktop-quiz-dropdown-content">
+                        <li><a href="./HtmlQuiz.html">HTML Quiz</a></li>
+                        <li><a href="./CssQuiz.html">CSS Quiz</a></li>
+                    </ul>
+                </li>
+                <li><a href="../courses/code-editor.html"><i class="fa-solid fa-code"></i><span>Code Editor</span></a></li>
+                <!-- Menu link hover effect -->
+                <span class="nav-menu-hover-effect"></span>
+            </ul>
+            <div>
+                <button class="login"><a href="../login.html">Login</a></button>
+            </div>
+            <!-- Humburger icon when Somebody view in Phones-->
+            <label class="hamburger-menu" for="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Hamburger menu icon with hidden checkbox -->
+            <input type="checkbox" id="menuToggle">
+            <!-- Navbar menu when website view in Mobile Phones  -->
+            <ul class="phone-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="learn-dropdown">
+                    <input type="checkbox" id="learn-dropdown-checkbox" name="Click">
+                    <label for="learn-dropdown-checkbox" class="learn-dropdown-label">Learn</label>
+                    <div class="learn-dropdown-content">
+                        <a href="../courses/LearnHtml.html">HTML</a>
+                    </div>
+                </li>
+                <li class="quiz-dropdown">
+                    <input type="checkbox" id="quiz-dropdown-checkbox" name="Click">
+                    <label for="quiz-dropdown-checkbox" class="quiz-dropdown-label">Take Quiz</label>
+                    <div class="quiz-dropdown-content">
+                        <a href="./HtmlQuiz.html" >HTML Quiz</a>
+                        <a href="./CssQuiz.html" >CSS Quiz</a>
+                    </div>
+                </li>
+                <li><a href="../courses/code-editor.html">Code Editor</a></li>
+                <li><a href="../login.html">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="quiz-cards-containter">
+            <div id="question1" class="quiz-card">
+                <p>Question 1: What does HTML stand for?</p>
+                <ol>
+                    <li><input type="radio" id="q1option1" name="question1"> <label for="q1option1">HyperText Markup Language</label></label></li>
+                    <li><input type="radio" id="q1option2" name="question1"> <label for="q1option2">Hyperlinks and Text Markup Language</label></li>
+                    <li><input type="radio" id="q1option3" name="question1"> <label for="q1option3">Home Tool Markup Language</label></li>
+                    <li><input type="radio" id="q1option4" name="question1"> <label for="q1option4">HyperTech Mark Language</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn next"><a href="#question2">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question2" class="quiz-card">
+                <p>Question 2: What is the correct HTML element for inserting a line break?</p>
+                <ol>
+                    <li><input type="radio" id="q2option1" name="question2"> <label for="q2option1">&lt;br&gt;</label></li>
+                    <li><input type="radio" id="q2option2" name="question2"> <label for="q2option2">&lt;lb&gt;</label></li>
+                    <li><input type="radio" id="q2option3" name="question2"> <label for="q2option3">&lt;break&gt;</label></li>
+                    <li><input type="radio" id="q2option4" name="question2"> <label for="q2option4">&lt;line&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question1"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question3">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question3" class="quiz-card">
+                <p>Question 3: Which HTML tag is used to define an internal stylesheet?</p>
+                <ol>
+                    <li><input type="radio" id="q3option1" name="question3"> <label for="q3option1">&lt;style&gt;</label></li>
+                    <li><input type="radio" id="q3option2" name="question3"> <label for="q3option2">&lt;css&gt;</label></li>
+                    <li><input type="radio" id="q3option3" name="question3"> <label for="q3option3">&lt;script&gt;</label></li>
+                    <li><input type="radio" id="q3option4" name="question3"> <label for="q3option4">&lt;link&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question2"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question4">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question4" class="quiz-card">
+                <p>Question 4: How can you make a numbered list in HTML?</p>
+                <ol>
+                    <li><input type="radio" id="q4option1" name="question4"> <label for="q4option1">&lt;list&gt;</label></li>
+                    <li><input type="radio" id="q4option2" name="question4"> <label for="q4option2">&lt;ol&gt;</label></li>
+                    <li><input type="radio" id="q4option3" name="question4"> <label for="q4option3">&lt;ul&gt;</label></li>
+                    <li><input type="radio" id="q4option4" name="question4"> <label for="q4option4">&lt;nl&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question3"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question5">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question5" class="quiz-card">
+                <p>Question 5: Which tag is used to create a hyperlink in HTML?</p>
+                <ol>
+                    <li><input type="radio" id="q5option1" name="question5"> <label for="q5option1">lt;link&gt;</label></li>
+                    <li><input type="radio" id="q5option2" name="question5"> <label for="q5option2"></label>&lt;a&gt;</li>
+                    <li><input type="radio" id="q5option3" name="question5"> <label for="q5option3"></label>&lt;href&gt;</li>
+                    <li><input type="radio" id="q5option4" name="question5"> <label for="q5option4"></label>&lt;hyperlink&gt;</li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question4"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question6">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question6" class="quiz-card">
+                <p>Question 6: How can you open a link in a new tab/browser window?</p>
+                <ol>
+                    <li><input type="radio" id="q6option1" name="question6"> <label for="q6option1">target="_blank"</label></li>
+                    <li><input type="radio" id="q6option2" name="question6"> <label for="q6option2">target="_new"</label></li>
+                    <li><input type="radio" id="q6option3" name="question6"> <label for="q6option3">target="new_tab"</label></li>
+                    <li><input type="radio" id="q6option4" name="question6"> <label for="q6option4">open="_tab"</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question5"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question7">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question7" class="quiz-card">
+                <p>Question 7: Which of the following is the correct way to comment in HTML?</p>
+                <ol>
+                    <li><input type="radio" id="q7option1" name="question7"> <label for="q7option1">// This is a comment</label></li>
+                    <li><input type="radio" id="q7option2" name="question7"> <label for="q7option2">lt;!-- This is a comment --&gt;</label></li>
+                    <li><input type="radio" id="q7option3" name="question7"> <label for="q7option3"># This is a comment</label></li>
+                    <li><input type="radio" id="q7option4" name="question7"> <label for="q7option4">/* This is a comment */</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question6"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question8">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question8" class="quiz-card">
+                <p>Question 8: Which tag is used to define a table header?</p>
+                <ol>
+                    <li><input type="radio" id="q8option1" name="question8"> <label for="q8option1">&lt;thead&gt;</label></li>
+                    <li><input type="radio" id="q8option2" name="question8"> <label for="q8option2">&lt;th&gt;</label></li>
+                    <li><input type="radio" id="q8option3" name="question8"> <label for="q8option3">&lt;header&gt;</label></li>
+                    <li><input type="radio" id="q8option4" name="question8"> <label for="q8option4">&lt;tr&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question7"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question9">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question9" class="quiz-card">
+                <p>Question 9: Which attribute is used to specify that an input field must be filled out?</p>
+                <ol>
+                    <li><input type="radio" id="q9option1" name="question9"> <label for="q9option1">required</label></li>
+                    <li><input type="radio" id="q9option2" name="question9"> <label for="q9option2">placeholder</label></li>
+                    <li><input type="radio" id="q9option3" name="question9"> <label for="q9option3">validate</label></li>
+                    <li><input type="radio" id="q9option4" name="question9"> <label for="q9option4">mandatory</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question8"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question10">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question10" class="quiz-card">
+                <p>Question 10: Which HTML tag is used to create an unordered list?</p>
+                <ol>
+                    <li><input type="radio" id="q10option1" name="question10"> <label for="q10option1">&lt;ul&gt;</label></li>
+                    <li><input type="radio" id="q10option2" name="question10"> <label for="q10option2">&lt;ol&gt;</label></li>
+                    <li><input type="radio" id="q10option3" name="question10"> <label for="q10option3">&lt;list&gt;</label></li>
+                    <li><input type="radio" id="q10option4" name="question10"> <label for="q10option4">&lt;li&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question9"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question11">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question11" class="quiz-card">
+                <p>Question 11: Which attribute is used in HTML to define inline styles?</p>
+                <ol>
+                    <li><input type="radio" id="q11option1" name="question11"> <label for="q11option1">class</label></li>
+                    <li><input type="radio" id="q11option2" name="question11"> <label for="q11option2">style</label></li>
+                    <li><input type="radio" id="q11option3" name="question11"> <label for="q11option3">styles</label></li>
+                    <li><input type="radio" id="q11option4" name="question11"> <label for="q11option4">font</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question10"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question12">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question12" class="quiz-card">
+                <p>Question 12: Which HTML tag is used to define a form for user input?</p>
+                <ol>
+                    <li><input type="radio" id="q12option1" name="question12"> <label for="q12option1">&lt;form&gt;</label></li>
+                    <li><input type="radio" id="q12option2" name="question12"> <label for="q1option2">&lt;input&gt;</label></li>
+                    <li><input type="radio" id="q12option3" name="question12"> <label for="q1option3">lt;textarea&gt;</label></li>
+                    <li><input type="radio" id="q12option4" name="question12"> <label for="q12option4">&lt;button&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question11"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question13">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question13" class="quiz-card">
+                <p>Question 13: Which HTML element is used to specify a footer for a document or section?</p>
+                <ol>
+                    <li><input type="radio" id="q13option1" name="question13"> <label for="q13option1">&lt;footer&gt;</label></li>
+                    <li><input type="radio" id="q13option2" name="question13"> <label for="q13option2">&lt;bottom&gt;</label></li>
+                    <li><input type="radio" id="q13option3" name="question13"> <label for="q13option3">&lt;section&gt;</label></li>
+                    <li><input type="radio" id="q13option4" name="question13"> <label for="q13option4">&lt;end&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question12"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question14">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question14" class="quiz-card">
+                <p>Question 14: What is the correct HTML element to define emphasized text?</p>
+                <ol>
+                    <li><input type="radio" id="q14option1" name="question14"> <label for="q14option1">&lt;italic&gt;</label></li>
+                    <li><input type="radio" id="q14option2" name="question14"> <label for="q14option2">&lt;em&gt;</label></li>
+                    <li><input type="radio" id="q14option3" name="question14"> <label for="q14option3">lt;bold&gt;</label></li>
+                    <li><input type="radio" id="q14option4" name="question14"> <label for="q14option4">&lt;strong&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question13"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question15">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question15" class="quiz-card">
+                <p>Question 15: What is the correct HTML for adding a background color?</p>
+                <ol>
+                    <li><input type="radio" id="q15option1" name="question15"> <label for="q15option1">&lt;body bg="yellow"&gt;</label></li>
+                    <li><input type="radio" id="q15option2" name="question15"> <label for="q15option2">&lt;body style="background-color:yellow;"&gt;</label></li>
+                    <li><input type="radio" id="q15option3" name="question15"> <label for="q15option3">&lt;background&gt;yellow&lt;/background&gt;</label></li>
+                    <li><input type="radio" id="q15option4" name="question15"> <label for="q15option4">&lt;body color="yellow"&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question14"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question16">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question16" class="quiz-card">
+                <p>Question 16: Which HTML element is used to display a scalar measurement within a range?</p>
+                <ol>
+                    <li><input type="radio" id="q16option1" name="question16"> <label for="q16option1">lt;range&gt;</label></li>
+                    <li><input type="radio" id="q16option2" name="question16"> <label for="q16option2">&lt;meter&gt;</label></li>
+                    <li><input type="radio" id="q16option3" name="question16"> <label for="q16option3">&lt;progress&gt;</label></li>
+                    <li><input type="radio" id="q16option4" name="question16"> <label for="q16option4">&lt;measure&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question15"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question17">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question17" class="quiz-card">
+                <p>Question 17: Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</p>
+                <ol>
+                    <li><input type="radio" id="q17option1" name="question17"> <label for="q17option1">title</label></li>
+                    <li><input type="radio" id="q17option2" name="question17"> <label for="q17option2">alt</label></li>
+                    <li><input type="radio" id="q17option3" name="question17"> <label for="q17option3">src</label></li>
+                    <li><input type="radio" id="q17option4" name="question17"> <label for="q17option4">description</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question16"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question18">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question18" class="quiz-card">
+                <p>Question 18: What is the correct HTML element for playing video files?</p>
+                <ol>
+                    <li><input type="radio" id="q18option1" name="question1"> <label for="q18option1">&lt;video&gt;</label></li>
+                    <li><input type="radio" id="q18option2" name="question1"> <label for="q18option2">&lt;movie&gt;</label></li>
+                    <li><input type="radio" id="q18option3" name="question1"> <label for="q18option3">&lt;media&gt;</label></li>
+                    <li><input type="radio" id="q18option4" name="question1"> <label for="q18option4">&lt;play&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question17"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question19">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question19" class="quiz-card">
+                <p>Question 19: Which element is used in HTML5 to draw graphics on the web page?</p>
+                <ol>
+                    <li><input type="radio" id="q19option1" name="question19"> <label for="q19option1">&lt;svg&gt;</label></li>
+                    <li><input type="radio" id="q19option2" name="question19"> <label for="q19option2">lt;graphics&gt;</label></li>
+                    <li><input type="radio" id="q19option3" name="question19"> <label for="q19option3">&lt;canvas&gt;</label></li>
+                    <li><input type="radio" id="q19option4" name="question19"> <label for="q19option4">&lt;draw&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question18"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="#question20">Next <i class="fa-solid fa-arrow-down"></i></a></button>
+                </div>
+            </div>
+            <div id="question20" class="quiz-card">
+                <p>Question 20: Which HTML5 tag is used to define navigation links?</p>
+                <ol>
+                    <li><input type="radio" id="q20option1" name="question20"> <label for="q20option1">lt;nav&gt;</label></li>
+                    <li><input type="radio" id="q20option2" name="question20"> <label for="q20option2">&lt;navigation&gt;</label></li>
+                    <li><input type="radio" id="q20option3" name="question20"> <label for="q20option3">&lt;menu&gt;</label></li>
+                    <li><input type="radio" id="q20option4" name="question20"> <label for="q20option4">&lt;links&gt;</label></li>
+                </ol>
+                <div class="previous-next-btn">
+                    <button class="btn previous"><a href="#question19"><i class="fa-solid fa-arrow-up"></i> Previous</a></button>
+                    <button class="btn next"><a href="">Submit</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

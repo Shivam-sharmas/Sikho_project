@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ..............CSS Reset.............. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f7f8fc;
+}
+
+nav .logo img {
+    height: 80px;
+}
+
+nav .logo {
+    display: flex;
+}
+
+nav .logo span {
+    font-weight: 900;
+    position: relative;
+    top: 6px;
+    left: -27px;
+}
+
+nav .desktop-nav-menu {
+    display: flex;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: black;
+}
+
+nav .desktop-nav-menu li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+nav .desktop-nav-menu li {
+    list-style: none;
+    padding: 15px 25px 15px 25px;
+}
+
+nav .desktop-nav-menu li a span {
+    padding-left: 8px;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+nav .login {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px 10px 15px;
+    background-color: #6674cc;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav .login a{
+    text-decoration: none;
+    color: white;
+}
+
+.login:hover {
+    background-color: #3e4ca7;
+    color: white;
+}
+
+/* Hidden off screen initially when website view in desktop but show in phones*/
+nav .phone-nav {
+    width: 101vw;
+    height: 90vh;
+    position: fixed;
+    top: 80px;
+    right: -580px;
+    transition: right 1s ease;
+    padding-top: 20px;
+    display: none;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    backdrop-filter: blur(20px);
+    font-weight: 600;
+    z-index: 1;
+}
+
+nav .phone-nav li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .phone-nav li a {
+    color: black;
+    padding: 5px 45px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+nav .phone-nav li:last-child a {
+    padding: 5px 23px;
+}
+
+nav .desktop-nav-menu .desktop-dropdown {
+    position: relative;
+}
+
+.desktop-learn-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    padding-right: 14px;
+    padding-left: 14px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.desktop-quiz-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.desktop-dropdown-content li {
+    width: 10vw;
+}
+
+.desktop-dropdown:hover .desktop-learn-dropdown-content,
+.desktop-dropdown:hover .desktop-quiz-dropdown-content {
+    display: block;
+}
+
+nav .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    display: none;
+}
+
+nav .hamburger-menu span {
+    display: block;
+    padding: 3px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: black;
+    transition: .1s;
+}
+
+.hamburger-menu span:nth-child(1) {
+    width: 40px;
+}
+
+.hamburger-menu span:nth-child(2) {
+    width: 35px;
+    margin-left: 9px;
+}
+
+.hamburger-menu span:nth-child(3) {
+    width: 25px;
+    margin-left: 19px;
+}
+
+/* Checkbox styling (hidden) */
+nav #menuToggle {
+    display: none;
+}
+
+/* Show sidebar when checkbox is checked */
+#menuToggle:checked~.phone-nav {
+    right: 0;
+}
+
+/* z index for to show li item on the uppar side of menu bar relative for to set the glowing according to li  */
+.desktop-nav-menu li {
+    position: relative;
+    z-index: 1;
+}
+
+/* Postion relative for span which is in inside of desktop-nav-menu */
+nav .desktop-nav-menu {
+    position: relative;
+}
+
+.desktop-nav-menu .nav-menu-hover-effect {
+    position: absolute;
+    top: -2px;
+    left: 492px;
+    width: 140px;
+    height: 62.5px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 8px;
+    transition: ease-out .5s;
+}
+
+.desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+    left: 0;
+}
+
+.desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+    left: 128px;
+}
+
+.desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+    left: 285px;
+}
+
+.desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+    left: 492px;
+}
+
+.learn-dropdown,
+.quiz-dropdown {
+    position: relative;
+    text-align: center;
+    margin: 5px;
+}
+
+.learn-dropdown-label,
+.quiz-dropdown-label {
+    padding: 5px 46px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.quiz-dropdown-label {
+    padding: 5px 30px;
+}
+
+#learn-dropdown-checkbox {
+    display: none;
+}
+
+#quiz-dropdown-checkbox {
+    display: none;
+}
+
+.learn-dropdown-content,
+.quiz-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 52px;
+    left: 85px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px;
+}
+
+.learn-dropdown-content a,
+.quiz-dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #f9f9f9;
+}
+
+.learn-dropdown-content a:hover,
+.quiz-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+#learn-dropdown-checkbox:checked+.learn-dropdown-label+.learn-dropdown-content {
+    display: block;
+}
+
+#quiz-dropdown-checkbox:checked+.quiz-dropdown-label+.quiz-dropdown-content {
+    display: block;
+}
+
+iframe {
+    height: 100vh;
+    width: 100%;
+}
+
+/* For phones */
+@media only screen and (max-width: 480px) {
+    
+    header nav .desktop-nav-menu, nav .login{
+        display: none;
+    }
+
+    header nav .hamburger-menu, header nav .phone-nav  {
+        display: block;
+    }
+    header nav{
+        justify-content: space-between;
+    }
+
+
+}
+
+/* For tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    header nav .desktop-nav-menu li {
+        padding: 8px 5px 8px 5px;
+    }
+
+    header nav .login {
+        font-size: .5rem;
+
+    }
+
+    header nav{
+        justify-content: space-between;
+    }
+    header nav .desktop-nav-menu li a {
+        font-size: .6rem;
+    }
+    header .desktop-nav-menu .nav-menu-hover-effect {
+        position: absolute;
+        top: -2px;
+        left: 215px;
+        width: 58px;
+        height: 43.5px;
+    }
+
+    header .desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+        left: 0;
+    }
+
+    header .desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+        left: 57px;
+    }
+
+    header .desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+        left: 125px;
+    }
+
+    header .desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+        left: 215px;
+    }
+
+    .desktop-learn-dropdown-content {
+        top: 41.5px;
+        left: -10.5px;
+    }
+    
+    .desktop-quiz-dropdown-content {
+        top: 41.5px;
+        left: 13.5px;
+    }
+}
+
+/* For iPads (Portrait and Landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header nav .desktop-nav-menu li {
+        padding: 12px 11px 12px 11px;
+    }
+
+    nav .login {
+        font-size: .9rem;
+        margin-left: 10px;
+    }
+
+    nav{
+        justify-content: space-between;
+        padding-right: 10px;
+
+    }
+    header nav .desktop-nav-menu li a {
+        font-size: 1rem;
+    }
+
+    header .desktop-nav-menu .nav-menu-hover-effect {
+        position: absolute;
+        top: -2px;
+        left: 365px;
+        width: 88px;
+        height: 52px;
+    }
+
+    header .desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+        left: 0;
+    }
+
+    header .desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+        left: 100px;
+    }
+
+    header .desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+        left: 215px;
+    }
+
+    header .desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+        left: 365px;
+    }
+
+    .desktop-learn-dropdown-content {
+        top: 49px;
+        left: -11px;
+    }
+    
+    .desktop-quiz-dropdown-content {
+        top: 49px;
+        left: 13.5px;
+    }
+    
+}
+
+.welcome-area{
+    animation: lefttoright 2s ease ;
+}
+header{
+    animation: right-to-left-header 2s ease;
+}
+
+@keyframes right-to-left-header {
+    from {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+    
+    to {
+        opacity: 1;
+    }
+}

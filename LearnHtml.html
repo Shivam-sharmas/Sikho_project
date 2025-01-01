@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheets/Courses.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Website logo -->
+            <div class="logo">
+                <img src="../images/SikhoLogo.png" alt="">
+                <!-- Website logo name -->
+                <span>Sikho</span>
+            </div>
+            <!-- Navbar menu when website view in Desktop  -->
+            <ul class="desktop-nav-menu">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-book-open"></i><span>Learn</span></a>
+                    <ul class="desktop-learn-dropdown-content">
+                        <li><a href="./LearnHtml.html">HTML</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-lightbulb"></i><span>Take Quiz</span></a>
+                    <ul class="desktop-quiz-dropdown-content">
+                        <li><a href="../quizes/HtmlQuiz.html">HTML Quiz</a></li>
+                        <li><a href="../quizes/CssQuiz.html">CSS Quiz</a></li>
+                    </ul>
+                </li>
+                <li><a href="./code-editor.html"><i class="fa-solid fa-code"></i><span>Code Editor</span></a></li>
+                <!-- Menu link hover effect -->
+                <span class="nav-menu-hover-effect"></span>
+            </ul>
+            <div>
+                <button class="login"><a href="../login.html">Login</a></button>
+            </div>
+            <!-- Humburger icon when Somebody view in Phones-->
+            <label class="hamburger-menu" for="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Hamburger menu icon with hidden checkbox -->
+            <input type="checkbox" id="menuToggle">
+            <!-- Navbar menu when website view in Mobile Phones  -->
+            <ul class="phone-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="learn-dropdown">
+                    <input type="checkbox" id="learn-dropdown-checkbox" name="Click">
+                    <label for="learn-dropdown-checkbox" class="learn-dropdown-label">Learn</label>
+                    <div class="learn-dropdown-content">
+                        <a href="./LearnHtml.html">HTML</a>
+                    </div>
+                </li>
+                <li class="quiz-dropdown">
+                    <input type="checkbox" id="quiz-dropdown-checkbox" name="Click">
+                    <label for="quiz-dropdown-checkbox" class="quiz-dropdown-label">Take Quiz</label>
+                    <div class="quiz-dropdown-content">
+                        <a href="../quizes/HtmlQuiz.html">HTML Quiz</a>
+                        <a href="../quizes/CssQuiz.html">CSS Quiz</a>
+                    </div>
+                </li>
+                <li><a href="./code-editor.html">Code Editor</a></li>
+                <li><a href="../login.html">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="languages">
+        <div class="lang-name">
+            <div class="sidebar">
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div class="sidebar-items">
+                    <ul>
+                        <li><a href="">
+                                <h1>HTML Tutorial</h1>
+                            </a></li>
+                        <li><a href="#html-intro">HTML Introduction</a></li>
+                        <li><a href="#html-working">HTML Working</a></li>
+                        <li><a href="#html-structure">HTML Structure</a></li>
+                        <li><a href="#html-heading">Heading Tags</a></li>
+                        <li><a href="#horizontal-linet-tag">Horizontal Tag</a></li>
+                        <li><a href="#line-break-tag">Line Break Tag</a></li>
+                        <li><a href="#anchor-tag">Anchor Tag</a></li>
+                        <li><a href="#img-tag">Image Tag</a></li>
+                        <li><a href="#html-inline-block-element">INLINE & BLOCK ELEMENTS</a></li>
+                        <li><a href="#html-inline-element">INLINE ELEMENTS</a></li>
+                        <li><a href="#html-block-element">Block ELEMENTS</a></li>
+                        <li><a href="#html-lists">HTML Lists</a></li>
+                        <li><a href="#unordered-lists">Unordered Lists</a></li>
+                        <li><a href="#ordered-lists">Ordered Lists</a></li>
+                        <li><a href="#definition-lists">Definition Lists</a></li>
+                        <li><a href="#html-table">HTML Tables</a></li>
+                        <li><a href="#html-forms">HTML Forms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div>HTML</div> -->
+        </div>
+    </section>
+    <aside>
+        <h1 class="heading">HTML Tutorial</h1>
+        <div><a href="#html-intro">HTML Introduction</a></div>
+        <div><a href="#html-working">HTML Working</a></div>
+        <div><a href="#html-structure">HTML Structure</a></div>
+        <div><a href="#html-heading">Heading Tags</a></div>
+        <div><a href="#html-parag">Paragraph Tags</a></div>
+        <div><a href="#horizontal-linet-tag">Horizontal Tag</a></div>
+        <div><a href="#line-break-tag">Line Break Tag</a></div>
+        <div><a href="#anchor-tag">Anchor Tag</a></div>
+        <div><a href="#img-tag">Image Tag</a></div>
+        <div><a href="#html-inline-block-element">INLINE & BLOCK ELEMENTS</a></div>
+        <div><a href="#html-inline-element">INLINE ELEMENTS</a></div>
+        <div><a href="#html-block-element">Block ELEMENTS</a></div>
+        <div><a href="#html-lists">HTML Lists</a></div>
+        <div><a href="#unordered-lists">Unordered Lists</a></div>
+        <div><a href="#ordered-lists">Ordered Lists</a></div>
+        <div><a href="#definition-lists">Definition Lists</a></div>
+        <div><a href="#html-table">HTML Tables</a></div>
+        <div><a href="#html-forms">HTML Forms</a></div>
+    </aside>
+    <main>
+        <Section id="html-intro">
+            <h1>Introduction to HTML</h1>
+            <p>HTML is the standard markup language for creating Web pages.</p>
+
+            <h2>What is HTML?</h2>
+            <ul>
+                <li>HTML stands for Hyper Text Markup Language</li>
+                <li>HTML is the standard markup language for creating Web pages</li>
+                <li>HTML describes the structure of a Web page</li>
+                <li>HTML consists of a series of elements</li>
+                <li>HTML elements tell the browser how to display the content</li>
+                <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a
+                    link", etc.</li>
+            </ul>
+            
+            <p>In building a webpage, think of HTML, CSS, and JavaScript as different parts of a car. HTML is like the
+                car's skeleton, forming the basic structure and frame. CSS adds the paint and finishing touches, making
+                the car look appealing with color, style, and design. JavaScript is similar to the engine and mechanical
+                parts, infusing the car with functionality, movement, and interactive features. Similarly, when
+                developing a website, HTML lays out the structure, CSS enhances its visual appeal, and JavaScript
+                provides interactivity and dynamic content</p>
+            <h2>History of HTML:</h2>
+            <ol>
+                <li>In 1989, Tim Berners-Lee established the World Wide Web (www), and in 1991, he created the first
+                    version of HTML.
+                </li>
+                <li>From 1995 to 1997, further work was done to develop and refine different versions of HTML.
+                </li>
+                <li>In 1999, a committee was organized that standardized HTML 4.0, a version still used by many today.
+                </li>
+                <li>The latest and most stable version of HTML is 5, also known as HTML5.
+                </li>
+            </ol>
+        </Section>
+
+        <section id="html-working">
+            <h1>HTML Working</h1>
+            <h2>How do websites work?</h2>
+            <p>When we want to access any information on the internet, we search for it using a web browser. The web
+                browser retrieves the content from web servers, where it is stored in the form of HTML documents.</p>
+            <p>An HTML document is created by writing code with specific tags in a code editor of your choice. The
+                document is then saved with the <strong>'.html'</strong> extension. Once saved, the browser interprets
+                the HTML document, reads it, and renders the web page.</p>
+            <p>The text editor has the HTML code of a website. This website can now be viewed in a beautifully rendered
+                format using a computer program known as a web browser.</p>
+            <h2>What is a Web Browser?</h2>
+            <p>A web browser is a program that understands HTML tags and renders them in a human-readable format that is
+                easily viewable by people visiting the website. Developers write code in HTML because it's a
+                straightforward way to instruct the web browser on what to display.</p>
+            <h2>How does a browser work?</h2>
+            <p>A web browser plays a crucial role in parsing and rendering HTML code to the client. A web browser is a
+                complex program that performs many tasks behind the scenes. Here's a summary of how it works:</p>
+            <ol>
+                <li>A browser is an application that reads HTML documents and displays them as web pages. Browsers can't
+                    access the content directly from where it's stored; this is where servers come into play.
+                </li>
+                <li>A server acts as an intermediary, listening to browser requests and fulfilling them by delivering
+                    the HTML document to the browser.
+                </li>
+                <li>Web browsers perform two main tasks: parsing and rendering.
+                </li>
+                <li>During the parsing stage, the browser receives raw bytes, which are converted into characters. These
+                    characters are then converted into tokens, which in turn are transformed into nodes. These nodes are
+                    organized into a tree-like data structure known as the DOM (Document Object Model).
+                </li>
+                <li>During the parsing stage, the browser receives raw bytes, which are converted into characters. These
+                    characters are then converted into tokens, which in turn are transformed into nodes. These nodes are
+                    organized into a tree-like data structure known as the DOM (Document Object Model).
+                </li>
+            </ol>
+
+        </section>
+
+            <section id="html-structure">
+                <h1>HTML Page Structure</h1>
+                <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags, with &lt;h1&gt; defining the most
+                    important heading.</p>
+
+                <pre class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+         &lt;!-- content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            </section>
+
+        <section id="html-heading">
+            <h1>HTML BASIC TAGS</h1>
+            <h2>Heading Tags</h2>
+            <h3>&lt;h1&gt; Tag: First-Level Heading</h3>
+            <p>The &lt;h1&gt; tag defines the first-level heading and is typically the largest and boldest among all the
+                heading tags. It is often used for the main title of the page.</p>
+            <pre class="code-box">
+&lt;h1&gt;
+    &lt;!-- Heading content --&gt;
+&lt;/h1&gt;
+                 </pre>
+            <h3>&lt;h2&gt; Tag: Second-Level Heading</h3>
+            <pre class="code-box">
+&lt;h2&gt;
+    &lt;!-- Heading content --&gt;
+&lt;/h2&gt;
+                 </pre>
+            <h3>&lt;h3&gt; Tag: Third-Level Heading</h3>
+            <pre class="code-box">
+&lt;h3&gt;
+    &lt;!-- Heading content --&gt;
+&lt;/h3&gt;
+                 </pre>
+            <h3>&lt;h4&gt; Tag: Fourth-Level Heading</h3>
+            <pre class="code-box">
+&lt;h4&gt;
+    &lt;!-- Heading content --&gt;
+&lt;/h4&gt;
+                 </pre>
+            <h3>&lt;h5&gt; Tag: Fifth-Level Heading</h3>
+            <pre class="code-box">
+&lt;h5&gt;
+    &lt;!-- Heading content --&gt;
+&lt;/h5&gt;
+                 </pre>
+            <h3>&lt;h6&gt; Tag: Sixth-Level Heading</h3>
+            <pre class="code-box">
+&lt;h6&gt;
+    &lt;!-- Heading content --&gt;
+&lt;/h6&gt;
+                 </pre>
+            <h2>Summary</h2>
+            <ul>
+                <li><strong>&lt;h1&gt; Tags:</strong> Used for the main title of the page; largest and most prominent
+                    heading.</li>
+                <li><strong>&lt;h2&gt; Tags:</strong>Used for major section headings; smaller than &lt;h1&gt; but still
+                    quite prominent.</li>
+                <li><strong>&lt;h3&gt; Tags:</strong>Used for sub-sections within an &lt;h2&gt; section; smaller than
+                    &lt;h2&gt; but larger than &lt;h4&gt;</li>
+                <li><strong>&lt;h4&gt; Tags:</strong>Often used for headings within an &lt;h3&gt; section; useful for
+                    further breaking down content.</li>
+                <li><strong>&lt;h5&gt; Tags:</strong>Rarely used; suitable for deeply nested sections or less important
+                    headings.</li>
+                <li><strong>&lt;h6&gt; Tags:</strong>he smallest heading tag; used for very specific or minor headings,
+                    rarely seen in general usage.</li>
+            </ul>
+        </section>
+
+        <section id="html-parag">
+            <h1>Paragraph Tag</h1>
+            <p>To create well-structured text in your HTML document, the &lt;p&gt; tag is essential for defining
+                paragraphs.</p>
+            <h2>&lt;p&gt; Tag: Defining a Paragraph in HTML</h2>
+            <p>The &lt;p&gt; tag is used to format text into distinct paragraphs. Each paragraph element is separated by
+                automatic empty line spaces above and below the content, providing a clear visual separation. The tag
+                must be closed with its corresponding </p>
+            <pre class="code-box">
+&lt;p&gt;
+    &lt;!-- Paragraph content --&gt;
+&lt;/p&gt;
+</pre>
+            <h1 id="horizontal-linet-tag">Horizontal Line Tag</h1>
+            <p>To add a horizontal line in your HTML document, the &lt;hr&gt; tag comes in handy.</p>
+
+            <h2>How to use the &lt;hr&gt; tag?</h2>
+            <pre class="code-box">
+&lt;hr&gt;
+</pre>
+
+            <h1 id="line-break-tag">Line Break Tag</h1>
+            <p>To insert a line break in your HTML document, you can utilize the &lt;br&gt; tag.</p>
+            <pre class="code-box">
+&lt;br&gt;
+</pre>
+            <p>The &lt;br&gt; tag is commonly referred to as an empty or self-closing tag, meaning it doesn't require a
+                closing tag. This tag is responsible for breaking text lines or separating paragraphs. When implemented,
+                it automatically moves the text following the tag to the next line.</p>
+            <h1 id="anchor-tag">Anchor Tag</h1>
+            <p>Links are fundamental to navigating the web. In HTML, links are created using the &lt;a&gt; tag, also
+                known as the Anchor tag.</p>
+            <h2>Key Characteristics of HTML Links</h2>
+            <ol>
+                <li>Specified by the &lt;a&gt; tag.</li>
+                <li>Also known as hyperlinks.
+                </li>
+                <li>Used to link one document to another.</li>
+                <li>Includes a closing tag &lt;a&gt;.</li>
+            </ol>
+            <h2>Syntax of HTML Links</h2>
+            <pre class="code-box">
+&lt;a href="Your specified path"&gt;
+        &lt;!-- Content --&gt;
+&lt;/a&gt;
+</pre>
+
+            <h2>Essential Attributes of the Anchor Tag</h2>
+            <p>HTML links primarily use two attributes:</p>
+            <ul>
+                <li><strong>href attribute:</strong> Defines the URL the link points to.</li>
+                <li><strong>target attribute:</strong>Specifies where to open the linked document.</li>
+            </ul>
+            <h3>Target Attribute Values
+            </h3>
+            <ul>
+                <li><strong>_blank:</strong> Opens the linked document in a new window or tab.</li>
+                <li><strong>_top:</strong> Opens document in the full body of the window.</li>
+                <li><strong>_self:</strong> Opens document in the same window or tab (default behavior).</li>
+                <li><strong>_parent:</strong> Opens the linked document in the parent frame.</li>
+            </ul>
+            <h1 id="img-tag">Image Tag
+            </h1>
+            <p>Images play a crucial role in enhancing web pages by providing a visual context that complements textual
+                content. In HTML, the &lt;img&gt; tag is used to embed images into web pages.</p>
+            <h2>Basic Syntax for Embedding Images
+            </h2>
+            <p>This is how the syntax to embed an image in html looks like:
+            </p>
+
+            <pre class="code-box">
+&lt;img src="image's path"/&gt;
+</pre>
+        </section>
+
+        <section>
+            <h1 id="html-inline-block-element">Inline and Block Elements</h1>
+            <h2 id="html-inline-element">HTML Inline Elements</h2>
+            <p>Inline Elements don't start on a new line. It only takes the width required to cover the content.</p>
+            <p>HTML elements are generally divided into two categories: Block-level and Inline elements.</p>
+            <h3>What are Inline Elements?</h3>
+            <p>Inline elements do not start on a new line and only take up as much width as necessary. They are part of
+                the flow within other elements.</p>
+            <h3>Example:</h3>
+            <pre class="code-box">
+&lt;span&gt;This is Inline Element&lt;/span&gt;
+</pre>
+            <h3>Common Inline Elements
+            </h3>
+            <ul>
+                <li>&lt;span&gt;: A generic inline container for text</li>
+                <li>&lt;a&gt;: Defines a hyperlink
+                </li>
+                <li>&lt;strong&gt;: Defines important text
+                </li>
+                <li>&lt;em&gt;: Defines emphasized text
+                </li>
+                <li>&lt;img&gt;: Embeds an image
+                </li>
+                <li>&lt;input&gt;: Defines an input control
+                </li>
+            </ul>
+            <h2 id="html-block-element">HTML Block Elements</h2>
+            <p>Block level elements start on a new line and take up unnecessary spaces.</p>
+            <h3>What are Block-level Elements?
+            </h3>
+            <p>Block-level elements are those that start on a new line and take up the entire width of their container
+                by default. They essentially claim all the horizontal space for themselves, pushing any content that
+                comes after them to a new line.</p>
+            <h4>Example:</h4>
+            <pre class="code-box">
+&lt;p&gt;
+    &lt;!-- Paragraph content --&gt;
+&lt;/p&gt;
+    </pre>
+            <h3>Characteristics of Block-level Elements:</h3>
+            <ul>
+                <li>Always start on a new line.
+                </li>
+                <li>Take up the full width available.
+                </li>
+                <li>Width and height can be controlled via CSS.
+                </li>
+                <li>Can contain other block-level as well as inline elements.
+                </li>
+            </ul>
+        </section>
+
+        <section id="html-lists">
+            <h1>HTML Lists
+            </h1>
+            <p>we go shopping, the bill we receive includes a list of all the items we've purchased. In a similar
+                manner, web developers use lists to neatly display data on websites.</p>
+            <h2>Types of HTML Lists
+            </h2>
+            <p>HTML provides different types of lists to display data in various forms. Each list contains one or more
+                list items.</p>
+            <ul>
+                <li><strong>Unordered List:</strong> Displays items using bullets.
+                </li>
+                <li><strong>Ordered List:</strong> Displays items in a numerical sequence, and supports various
+                    numbering styles like Arabic numerals, Roman numerals, and so on.
+                </li>
+                <li><strong>Definition List:</strong> Organizes items in a format similar to a dictionary, with terms
+                    and their corresponding definitions.
+                </li>
+            </ul>
+            <h2 id="unordered-lists">An Unordered List
+            </h2>
+            <p>An unordered list uses bullets to display items. It is suitable for listing items where the order doesn't
+                matter. We will soon explore unordered lists in great detail
+            </p>
+
+            <h3>Key Characteristics of Unordered Lists
+            </h3>
+            <ul>
+                <li>No specific sequence is required.
+                </li>
+                <li>Typically displayed as bullet points.
+                </li>
+                <li>Defined using the &lt;ul&gt; tag.</li>
+                <li>Individual items use the &lt;li&gt; tag.
+                </li>
+            </ul>
+
+            <h4>Example :</h4>
+            <pre class="code-box">
+&lt;ul&gt;
+    &lt;li&gt;Reena&lt;/li&gt;
+    &lt;li&gt;Meena&lt;/li&gt;
+    &lt;li&gt;Teena&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+            <h2 id="ordered-lists">An Ordered List
+            </h2>
+            <p>An ordered list uses numbers or other types of markers to indicate the sequence of items. It's ideal for
+                listing steps in a process or ranking items in order of importance. We will soon explore ordered lists
+                in great detail</p>
+
+            <h3>Key Points</h3>
+            <ul>
+                <li>Ordered lists are used for items that follow a sequence</li>
+                <li>They are created using the &lt;ol&gt; (Ordered List) tag.
+                </li>
+                <li>List items are enclosed within &lt;li&gt; (List Item) tags.
+                </li>
+            </ul>
+            <pre class="code-box">
+&lt;ol&gt;
+&lt;li&gt;Mango&lt;/li&gt;
+&lt;li&gt;Banana&lt;/li&gt;
+&lt;li&gt;Orange&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <h2 id="definition-lists">A Definition List
+            </h2>
+            <p>A definition list arranges items in a way similar to a dictionary, with a term followed by its
+                definition. This is useful for glossaries or to display metadata.</p>
+
+            <pre class="code-box">
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;HyperText Markup Language: The standard language for creating web pages.&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;Cascading Style Sheets: A stylesheet language used for describing the look and formatting of adocument written in HTML.&lt;/dd&gt;
+
+&lt;dt&gt;JavaScript&lt;/dt&gt;
+        &lt;dd&gt;A programming language commonly used in web development to add interactive features.&lt;/dd&gt;
+&lt;/dl&gt;
+            </pre>
+            <h2>Understanding the example
+            </h2>
+
+            <p>In this example:</p>
+            <ul>
+                <li>&lt;dl&gt; is the container for the list.</li>
+                <li>&lt;dt&gt; defines the terms that you want to explain.</li>
+                <li>&lt;dd&gt; contains the definitions or explanations for the terms.</li>
+            </ul>
+        </section>
+
+        <section id="html-table">
+            <h1>HTML Tables
+            </h1>
+            <p>HTML Tables
+            </p>
+            <h2>Syntax of HTML Table
+            </h2>
+
+            <pre class="code-box">
+&lt;table&gt;
+// table Content
+&lt;/table&gt;
+</pre>
+
+            <h2>Key Elements of HTML Table
+            </h2>
+
+            <ul>
+                <li>&lt;table&gt;: Defines the table itself.
+                </li>
+                <li>&lt;tr&gt;: Used for table rows.
+                </li>
+                <li>&lt;th&gt;: Used for table headings.
+                </li>
+                <li>
+                    &lt;td&gt;: Used for table cells (data).
+                </li>
+            </ul>
+
+            <h3>
+                Basic Table Structure
+            </h3>
+
+            <pre class="code-box">
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Name&lt;/td&gt;
+    &lt;td&gt;Age&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+            <h2>rowspan and colspan Attributes
+            </h2>
+            <p><strong>Rowspan:</strong>If you want a table cell to span multiple rows, you can use the rowspan
+                attribute.</p>
+            <pre class="code-box">
+&lt; rowspan="value"&gt;
+</pre>
+            <p><strong>Colspan:</strong>If you want a table cell to span multiple columns, you can use the colspan
+                attribute.</p>
+            <pre class="code-box">
+&lt; colspan="value"&gt;
+</pre>
+
+            <h2>Table Headers and Footers
+            </h2>
+            <p>Besides <th> for individual header cells, HTML tables allow you to group header or footer content using
+                    &lt;thead&gt; and &lt;tfoot&gt;.
+            </p>
+            <pre class="code-box">
+&lt;table&gt;
+&lt;thead&gt;
+     &lt; !-- Content --&gt;
+&lt;/thead&gt;
+&lt;tfoot&gt;
+        &lt; !-- Content --&gt;
+&lt;/tfoot&gt;
+&lt;tbody&gt;
+        &lt; !-- Content --&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+            <h2>Sample HTML Table
+            </h2>
+            <p>Here is an example HTML table with all the important elements:
+            </p>
+            <pre class="code-box">
+&lt;table&gt;
+&lt; !-- Caption --&gt;
+    &lt;thead&gt;
+            &lt;tr&gt;
+                 &lt;th&gt;ID&lt;/th&gt;
+                 &lt;th&gt;Name&lt;/th&gt;
+            &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td&gt;001&lt;/td&gt;
+                &lt;td&gt;Sonu&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;002&lt;/td&gt;
+                &lt;td&gt;Bhawna&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;003&lt;/td&gt;
+                &lt;td&gt;Shalini&lt;/td&gt;
+            &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td colspan="3">Total Employees&gt;Name&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+        </section>
+
+        <section id="html-forms">
+            <h1>
+                Introduction to HTML Form
+            </h1>
+            <p>HTML forms are essential for collecting user input on web pages. Whether it's a search bar, a login
+                screen, or a multi-field registration form, HTML forms play a key role in web interactions. They enable
+                users to submit data, which can be processed, stored, or returned by a server.
+
+            </p>
+            <h2>Why Do We Use Forms?
+            </h2>
+            <p>Forms serve as the gateway between the user and the server, allowing for dynamic, interactive web
+                experiences. They are crucial for tasks such as user authentication, data submission, feedback
+                collection, and more. Simply put, forms make websites more engaging and functional.
+            </p>
+            <h2>HTML Forms Structure:
+            </h2>
+
+            <pre class="code-box">
+&lt;form action="/submit" method="post"&gt;
+    &lt;!-- Text input for username --&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" required&gt;
+    &lt;br&gt; &lt;br&gt;
+
+    &lt;!-- Password input --&gt;
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+    &lt;br&gt; &lt;br&gt;
+
+    &lt;!-- Radio buttons for gender --&gt;
+    &lt;label&gt;Gender:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="male" name="gender" value="male"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="female" name="gender" value="female"&gt;
+    &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+    &lt;br&gt;
+
+    &lt;!-- Submit button --&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </pre>
+            <h1>HTML Input Types
+            </h1>
+            <p>Input types in HTML forms are the backbone of interactive web applications. They allow users to send
+                information to web servers for various purposes like searching, logging in, or providing feedback. In
+                this blog, we'll explore common HTML input types: text, password, radio, and checkbox.
+
+            </p>
+            <h2>Text Input
+            </h2>
+            <p>The text input type is the most basic form of input and is widely used for collecting simple text data.
+
+            </p>
+<pre class="code-box">
+&lt;input type="text" name="username" placeholder="Enter your username"&gt;
+</pre>
+
+            <h2>Password Input
+            </h2>
+            <p>The password input type is similar to the text type but hides the characters entered by the user for
+                security reasons.
+            </p>
+<pre class="code-box">
+&lt;input type="password" name="password" placeholder="Enter your password"&gt;
+</pre>
+
+            <h2>Radio Buttons
+            </h2>
+            <p>Radio buttons are used when you want the user to select only one option from a set of choices.
+            </p>
+<pre class="code-box">
+&lt;input type="radio" id="male" name="gender" value="male"&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+&lt;input type="radio" id="female" name="gender" value="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;
+</pre>
+
+            <h2>Checkbox</h2>
+            <p>Checkboxes allow the user to select multiple options from a set.</p>
+<pre class="code-box">
+&lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"&gt;
+&lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;
+</pre>
+
+            <h1>Textarea & Select
+            </h1>
+            <p>In addition to the basic input types, HTML forms offer other controls like textarea and select for richer
+                user interaction. These elements allow for more complex data collection and provide a better user
+                experience. In this blog, we will dive into these form controls and provide examples.
+
+            </p>
+
+            <h2>The Textarea Element
+            </h2>
+            <p>The textarea element is used when you need multiline text input from the user. This is particularly
+                useful for comments, reviews, or any other type of input where the length is unpredictable.
+
+            </p>
+<pre class="code-box">
+&lt;textarea name="comment" rows="4" cols="50"&gt;
+        Enter your comment here...
+&lt;/textarea&gt;
+</pre>
+            <p>The rows and cols attributes define the visible dimensions of the textarea.</p>
+            <h2>The Select Element
+            </h2>
+
+            <p>The select element creates a dropdown menu for the user. It is useful when you have a predefined list of
+                options for the user to choose from.
+
+            </p>
+
+<pre class="code-box">
+&lt;select name="fruits"&gt;
+        &lt;option value="apple"&gt;Apple&lt;/option&gt;
+        &lt;option value="banana"&gt;Banana&lt;/option&gt;
+        &lt;option value="cherry"&gt;Cherry&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+        </section>
+    </main>
+</body>
+
+</html>

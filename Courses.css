@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "navbar navbar"
+        "asidebar language"
+        "asidebar main"
+        "asidebar footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#languages {
+    grid-area: language;
+    position: sticky;
+    top: 79px;
+    background-color: #f7f8fc;
+    display: none;
+}
+
+#languages .lang-name {
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+}
+
+.lang-name div {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+aside {
+    grid-area: asidebar;
+    position: sticky;
+    width: 250px;
+    top: 80px;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 82px;
+}
+
+main {
+    grid-area: main;
+    padding-left: 30px;
+    padding-right: 35px;
+    color: black;
+    padding-top: 20px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f7f8fc;
+}
+
+nav .logo img {
+    height: 80px;
+}
+
+nav .logo {
+    display: flex;
+}
+
+nav .logo span {
+    font-weight: 900;
+    position: relative;
+    top: 6px;
+    left: -27px;
+}
+
+nav .desktop-nav-menu {
+    display: flex;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: black;
+}
+
+nav .desktop-nav-menu li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+nav .desktop-nav-menu li {
+    list-style: none;
+    padding: 15px 25px 15px 25px;
+}
+
+nav .desktop-nav-menu li a span {
+    padding-left: 8px;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+nav .login {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px 10px 15px;
+    background-color: #6674cc;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav .login a{
+    text-decoration: none;
+    color: white;
+}
+
+.login:hover {
+    background-color: #3e4ca7;
+    color: white;
+}
+
+/* Hidden off screen initially when website view in desktop but show in phones*/
+nav .phone-nav {
+    width: 101vw;
+    height: 90vh;
+    position: fixed;
+    top: 80px;
+    right: -580px;
+    transition: right 1s ease;
+    padding-top: 20px;
+    display: none;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    font-weight: 600;
+    z-index: 1;
+}
+
+nav .phone-nav li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .phone-nav li a {
+    color: black;
+    padding: 12px;
+    padding: 5px 45px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+nav .phone-nav li:last-child a{
+    padding: 5px 23px;
+}
+
+nav .desktop-nav-menu .desktop-dropdown {
+    position: relative;
+}
+
+.desktop-learn-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 59px;
+    left: 2px;
+    padding-right: 14px;
+    padding-left: 14px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.desktop-quiz-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.desktop-dropdown-content li {
+    width: 10vw;
+}
+
+.desktop-dropdown:hover .desktop-learn-dropdown-content,.desktop-dropdown:hover .desktop-quiz-dropdown-content {
+    display: block;
+}
+
+/* for the nav bar menu options when click on humburger icon  */
+nav .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    display: none;
+}
+
+nav .hamburger-menu span {
+    display: block;
+    padding: 3px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: black;
+    transition: .1s;
+}
+
+.hamburger-menu span:nth-child(1) {
+    width: 40px;
+}
+
+.hamburger-menu span:nth-child(2) {
+    width: 35px;
+    margin-left: 9px;
+}
+
+.hamburger-menu span:nth-child(3) {
+    width: 25px;
+    margin-left: 19px;
+}
+
+/* Checkbox styling (hidden) */
+nav #menuToggle {
+    display: none;
+}
+
+/* Show sidebar when checkbox is checked */
+#menuToggle:checked~.phone-nav {
+    right: 0;
+}
+
+/* z index for to show li item on the uppar side of menu bar relative for to set the glowing according to li  */
+.desktop-nav-menu li {
+    position: relative;
+    z-index: 1;
+}
+
+/* Postion relative for span which is in inside of desktop-nav-menu */
+nav .desktop-nav-menu {
+    position: relative;
+}
+
+.desktop-nav-menu .nav-menu-hover-effect {
+    position: absolute;
+    top: -2px;
+    left: 128px;
+    width: 140px;
+    height: 62.5px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 8px;
+    transition: ease-out .5s;
+}
+
+.desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+    left: 0;
+}
+
+.desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+    left: 128px;
+}
+
+.desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+    left: 285px;
+}
+
+.desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+    left: 492px;
+}
+
+
+.sidebar-items {
+    position: fixed;
+    top: 119px;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    color: white;
+    overflow: scroll;
+    transition: 0.5s;
+    z-index: 1;
+    backdrop-filter: blur(45px);
+}
+
+.sidebar-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-items ul li {
+    padding: 10px 5px;
+}
+
+.sidebar-items ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* for aside bar slide by hamburger icon  */
+.hamburger {
+    position: fixed;
+    top: 90px;
+    left: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    z-index: 1;
+}
+
+.sidebar {
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 23px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+#menu-toggle:checked~.sidebar-items {
+    left: 0;
+}
+
+/* ************* Aside Bar Styles *************** */
+
+aside div,
+.heading {
+    backdrop-filter: blur(20px);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.431) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.179) 100%);
+    padding: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+    
+    align-items: center;
+}
+
+aside div a {
+    text-decoration: none;
+    color:coral;
+    display: inline-block;
+    width: 220px;
+    padding: 20px;
+    color:  #690546;
+}
+
+aside div:hover {
+    backdrop-filter: blur(50px);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.473) 0%, rgba(9, 9, 121, 0.385) 35%, rgba(0, 213, 255, 0.315) 100%);
+    cursor: pointer;
+}
+
+aside div:active {
+    background-color: #6a6a6c;
+}
+
+aside a:active {
+    color: white;
+}
+aside a:hover {
+    color: white;
+}
+
+
+/* *********** Main Bar Style *********** */
+
+main iframe {
+    height: 40vh;
+    width: 51%;
+    border-radius: 5px;
+}
+
+main li {
+    margin-left: 35px;
+}
+
+#html-intro [alt="html-css-js-analogy"] {
+    height: 55vh;
+    width: 75vw;
+}
+
+#html-intro [alt="html-structure"] {
+    height: 55vh;
+    width: 35vw;
+}
+
+#html-inline-block-element img {
+    height: 50vh;
+}
+
+#html-working img {
+    width: 75vw;
+}
+
+#html-lists img {
+    width: 50vw;
+}
+
+main img {
+    animation: lefttoright 10s ease;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+@keyframes lefttoright {
+    from {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#html-intro,
+#html-working,
+#html-tags,
+#html-structure,
+#html-heading,
+#html-parag,
+#horizontal-linet-tag,
+#line-break-tag,
+#anchor-tag,
+#img-tag,
+#html-inline-block-element,
+#html-inline-element,
+#html-block-element,
+#html-lists,
+#unordered-lists,
+#ordered-lists,
+#definition-lists,
+#html-table,
+#html-forms {
+    scroll-margin-top: 80px;
+}
+
+
+main,
+aside,.lang-name {
+    animation: contactus 2s ease;
+}
+
+@keyframes contactus {
+    from {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    animation: right-to-left-header 2s ease;
+}
+
+@keyframes right-to-left-header {
+    from {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.learn-dropdown,.quiz-dropdown {
+    position: relative;
+    text-align: center;
+    margin: 5px;
+}
+
+.learn-dropdown-label,.quiz-dropdown-label {
+    padding: 5px 46px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.quiz-dropdown-label {
+    padding: 5px 30px;
+}
+
+#learn-dropdown-checkbox {
+    display: none;
+}
+
+#quiz-dropdown-checkbox {
+    display: none;
+}
+
+.learn-dropdown-content,.quiz-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 118px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px;
+}
+
+.learn-dropdown-content a,.quiz-dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.learn-dropdown-content a:hover,.quiz-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+#learn-dropdown-checkbox:checked + .learn-dropdown-label + .learn-dropdown-content {
+    display: block;
+}
+#quiz-dropdown-checkbox:checked + .quiz-dropdown-label + .quiz-dropdown-content {
+    display: block;
+}
+
+
+
+/* For phones */
+@media only screen and (max-width: 480px) {
+    
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    nav .desktop-nav-menu,aside,.login{
+        display: none;
+    }
+
+    nav .hamburger-menu, #languages, nav .phone-nav,.sidebar {
+        display: block;
+    }
+    nav{
+        justify-content: space-between;
+    }
+
+    body main section h1{
+        font-size: 2.5rem;
+    }
+
+
+    body main section h2{
+        font-size: 1.5rem;
+    }
+
+    main {
+        grid-area: main;
+        padding-left: 3px;
+        padding-right: 5px;
+
+    }
+
+}
+
+
+/* For tablets */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    
+    nav .desktop-nav-menu li {
+        padding: 10px 5px 10px 5px;
+    }
+
+    nav .login,nav .desktop-nav-menu li a {
+        font-size: .6rem;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        display: none;
+    }
+    #languages {
+        display: block;
+    }
+    .sidebar{
+        display: block;
+    }
+
+    .desktop-nav-menu .nav-menu-hover-effect {
+        position: absolute;
+        top: -2px;
+        left: 52px;
+        width: 60px;
+        height: 47.5px;
+    }
+
+    .desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+        left: 0;
+    }
+
+    .desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+        left: 52px;
+    }
+
+    .desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+        left: 125px;
+    }
+
+    .desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+        left: 213px;
+    }
+    .desktop-learn-dropdown-content {
+        top: 45.5px;
+        left: -8px;
+    }
+    
+    .desktop-quiz-dropdown-content {
+        top: 45.5px;
+        left: 15px;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    
+    nav .desktop-nav-menu li {
+        padding: 10px 11px 10px 11px;
+    }
+
+    nav .login,nav .desktop-nav-menu li a {
+        font-size: .8rem;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        display: none;
+    }
+    #languages {
+        display: block;
+    }
+    .sidebar{
+        display: block;
+    }
+
+    .desktop-nav-menu .nav-menu-hover-effect {
+        position: absolute;
+        top: -2px;
+        left: 80px;
+        width: 80px;
+        height: 47.5px;
+    }
+
+    .desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+        left: 0;
+    }
+
+    .desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+        left: 80px;
+    }
+
+    .desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+        left: 180px;
+    }
+
+    .desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+        left: 308px;
+    }
+    .desktop-learn-dropdown-content {
+        top: 45.5px;
+        left: -8px;
+    }
+    
+    .desktop-quiz-dropdown-content {
+        top: 45.5px;
+        left: 15px;
+    }
+
+}
+
+
+/* For iPads (Portrait and Landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    nav .desktop-nav-menu li {
+        padding: 12px 11px 12px 11px;
+    }
+
+    nav .login {
+        font-size: .9rem;
+        margin-left: 10px;
+    }
+
+    nav{
+        justify-content: space-between;
+        padding-right: 10px;
+
+    }
+    nav .desktop-nav-menu li a {
+        font-size: .8rem;
+    }
+
+    .desktop-nav-menu .nav-menu-hover-effect {
+        position: absolute;
+        top: -2px;
+        left: 80px;
+        width: 80px;
+        height: 51.5px;
+    }
+
+    .desktop-nav-menu li:nth-child(1):hover~.nav-menu-hover-effect {
+        left: 0;
+    }
+
+    .desktop-nav-menu li:nth-child(2):hover~.nav-menu-hover-effect {
+        left: 80px;
+    }
+
+    .desktop-nav-menu li:nth-child(3):hover~.nav-menu-hover-effect {
+        left: 180px;
+    }
+
+    .desktop-nav-menu li:nth-child(4):hover~.nav-menu-hover-effect {
+        left: 307px;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        display: none;
+    }
+
+     #languages,.sidebar {
+        display: block;
+    }
+    .sidebar-items {
+        width: 250px;
+    }
+
+    .sidebar-items ul li a {
+        font-size: 24px;
+    }
+
+    .desktop-learn-dropdown-content {
+        top: 47.4px;
+        left: -8px;
+    }
+    
+    .desktop-quiz-dropdown-content {
+        top: 47px;
+        left: 15px;
+    }
+}
+
+main .code-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 4px solid #4CAF50;
+    width: 60vw;
+    font-size: 14px;
+    text-wrap: wrap;
+    margin: 20px;
+    box-shadow: 2px 2px 10px 2px  #507a98;
+    cursor: pointer;
+}
+
+.code-box:hover{
+    animation: prescale 1.5s;
+
+}
+
+@keyframes prescale {
+    from{
+        transform: scale();
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+main strong {
+margin-right: 10px;
+}
+
+section h4{
+    color: #f7f8fc;
+    margin-top: 20px;
+}
+
+section h3{
+    margin-top: 20px;
+color: #31b1d1;
+}
+main section {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px 5px  #2e4800;
+    margin-bottom: 50px;
+}
+
+
+main section{
+    background-color: #001848;
+}
+main section p,li{
+    color: #d1d2d4;
+}
+main section h1{
+    color: #fccf41;
+    margin-bottom: 10px;
+    font-size: 4rem;
+    overflow-wrap:anywhere;
+    text-shadow: 2px 2px 20px  #d942a4;
+}
+main section li{
+    /* color: pink; */
+}
+main section h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: honeydew;
+}
+
+main .code-box{
+    background-color: #001848;
+    color: rgb(141, 173, 142);
+}
