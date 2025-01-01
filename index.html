@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikho</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Website logo -->
+            <div class="logo">
+                <img src="./images/SikhoLogo.png" alt="">
+                <!-- Website logo name -->
+                <span>Sikho</span>
+            </div>
+            <!-- Navbar menu when website view in Desktop  -->
+            <ul class="desktop-nav-menu">
+                <li><a href="./index.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-book-open"></i><span>Learn</span></a>
+                    <ul class="desktop-learn-dropdown-content">
+                        <li><a href="./courses/LearnHtml.html">HTML</a></li>
+                    </ul>
+                </li>
+                <li class="desktop-dropdown"><a href="#"><i class="fa-solid fa-lightbulb"></i><span>Take Quiz</span></a>
+                    <ul class="desktop-quiz-dropdown-content">
+                        <li><a href="./quizes/HtmlQuiz.html">HTML Quiz</a></li>
+                        <li><a href="./quizes/CssQuiz.html">CSS Quiz</a></li>
+                    </ul>
+                </li>
+                <li><a href="./courses/code-editor.html"><i class="fa-solid fa-code"></i><span>Code Editor</span></a>
+                </li>
+                <li><a href="#footer"><i class="fa-solid fa-users"></i><span>Contact Us</span></a></li>
+                <!-- Menu link hover effect -->
+                <span class="nav-menu-hover-effect"></span>
+            </ul>
+            <div>
+                <button class="login"><a href="./login.html">Login</a></button>
+            </div>
+            <!-- Humburger icon when Somebody view in Phones-->
+            <label class="hamburger-menu" for="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Hamburger menu icon with hidden checkbox -->
+            <input type="checkbox" id="menuToggle">
+            <!-- Navbar menu when website view in Mobile Phones  -->
+            <ul class="phone-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li class="learn-dropdown">
+                    <input type="checkbox" id="learn-dropdown-checkbox" name="Click">
+                    <label for="learn-dropdown-checkbox" class="learn-dropdown-label">Learn</label>
+                    <div class="learn-dropdown-content">
+                        <a href="./courses/LearnHtml.html">HTML</a>
+                    </div>
+                </li>
+                <li class="quiz-dropdown">
+                    <input type="checkbox" id="quiz-dropdown-checkbox" name="Click">
+                    <label for="quiz-dropdown-checkbox" class="quiz-dropdown-label">Take Quiz</label>
+                    <div class="quiz-dropdown-content">
+                        <a href="./quizes/HtmlQuiz.html">HTML Quiz</a>
+                        <a href="./quizes/CssQuiz.html">CSS Quiz</a>
+                    </div>
+                </li>
+                <li><a href="./courses/code-editor.html">Code Editor</a></li>
+                <li><a href="./login.html">Log in</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <img src="./images/wave (15).svg" alt="Wave Design"  class="svg-bottom svg1">
+    <main>
+        <div class="welcome-area">
+            <div>
+                <div class="welcome-to-sikho">Welcome to <b>Sikho</b></div>
+                <div class="lets-learn-language">
+                    <p>Let's Learn</p>
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </ul>
+                    <br>
+                </div>
+                <p class="welcome-para ">Welcome to Sikho, your gateway to learning and growth! <br> Explore expertly crafted resources and interactive content <br> designed to make education accessible and engaging for everyone. <br>Let’s learn and excel together!</p>
+            </div>
+            <img src="./images/SikhoLogo.png" alt="" >
+        </div>        
+        <img src="./images/wave (18).svg" alt="Wave Design" class="svg-bottom svg2">
+        <div class="parallax parallax0"></div>
+
+        <div class="HTML-section">
+            <div class="HTML-container">
+                <div class="left-section">
+                    <h2>HTML</h2>
+                    <p>The language for building web pages</p>
+                    <button class="btn green">Learn HTML</button>
+                    <button class="btn yellow">Video Tutorial</button>
+                    <button class="btn black">HTML Reference</button>
+                    <button class="btn pink">Get Certified</button>
+                </div>
+                <div class="animated-border html-animated-border">
+                    <div class="right-section">
+                        <h2>HTML Example:</h2>
+                        <pre class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Tutorial&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                        <button class="btn try"><a href="./courses/code-editor.html">Try it Yourself</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax parallax1"></div>
+
+        <div class="CSS-section">
+            <div class="CSS-container">
+                <div class="left-section">
+                    <h2>CSS</h2>
+                    <p>The language for building web pages</p>
+                    <button class="btn green">Learn CSS</button>
+                    <button class="btn black">CSS Reference</button>
+                    <button class="btn pink">Get Certified</button>
+                </div>
+                <div class="animated-border css-animated-border">
+                    <div class="right-section">
+                        <h2>CSS Example:</h2>
+                        <pre class="code-box">
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+}
+                    </pre>
+                        <button class="btn try"><a href="./courses/code-editor.html">Try it Yourself</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax parallax2"></div>
+
+        <div class="JAVASCRIPT-section">
+            <div class="JAVASCRIPT-container">
+                <div class="left-section">
+                    <h2>JavaScript</h2>
+                    <p>The language for building web pages</p>
+                    <button class="btn green">Learn JavaScript</button>
+                    <button class="btn black">JS Reference</button>
+                    <button class="btn pink">Get Certified</button>
+                </div>
+                <div class="animated-border js-animated-border">
+                    <div class="right-section">
+                        <h2>JavaScript Example:</h2>
+                        <pre class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+                            
+&lt;h1>My First Web Page&lt;/h1&gt;
+&lt;p&gt;My First Paragraph&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo")
+.innerHTML = 5 + 6;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                        <button class="btn try"><a href="./courses/code-editor.html">Try it Yourself</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax parallax3"></div>
+
+        <div class="Editor">
+            <div class="code-editor">
+                <h2>Code Editor</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod aperiam modi </p>
+                <img src="./images/Code-Editor.png" alt="Code-Editor">
+                <div>
+                    <button><a href="./courses/code-editor.html">Try Code-Editor</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax parallax4"></div>
+
+    </main>
+    <footer>
+        <div id="footer">
+            <div class="contact-us">
+                <div>
+                    <h3>Sikho - Expand Your Knowledge</h3>
+                    <p>Empowering learners with quality resources and tools for success.</p>
+                </div>
+                <hr>
+                <div>
+                    <a href="">About Us</a> |
+                    <a href="">Contact Us</a> |
+                    <a href="">Privacy Policy</a>
+                </div>
+                <div>
+                    <p>Follow us:</p>
+                    <a href="">LinkedIn</a>
+                    <a href="">Twitter</a>
+                    <a href="">Instagram</a>
+                </div>
+
+                <div>
+                    <p>&copy; 2024 Sikho. All Rights Reserved // Made my :- || Shivam Sharma ||.</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>We will get back you soon</p>
+                <form action="">
+                    <label for="Name">Name</label>
+                    <div>
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <label for="">Email</label>
+                    <input type="email" placeholder="example@gmail.com" required>
+
+                    <label for="">Message</label>
+                    <textarea cols="44" rows="5" name="" id="" placeholder="Enter your Message"></textarea>
+
+                    <input type="submit" value="Send">
+
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
